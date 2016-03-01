@@ -1,0 +1,119 @@
+/*variables*/
+
+$normal: 1em;
+$phone: "(min-width: 769px)";
+$desktop: "(min-width: 1025px)";
+
+/*end of variables*/
+
+
+/*mixins*/
+
+@mixin phone {
+	@media only screen and #{$phone} { 
+		@content;
+	}	
+}
+
+@mixin desktop {
+	@media only screen and #{$desktop} {
+		@content;
+	}	
+}
+
+
+/*end of mixins*/
+
+/*mobile only*/
+
+@include phone {
+	
+	.main-header,
+	.row, .container, .main-header-two {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	.main-header-two {
+		justify-content: space-between;
+		max-width: 100%;
+	}
+	
+	.main-header-three {
+		display: none;
+	}
+	
+	.container {
+		flex-direction: row-reverse;
+		padding: $normal;
+	}
+
+	.item {
+		flex: 1 10%;
+	}
+	
+	.row, .container {
+		flex-wrap: wrap;
+	}
+	
+	.main-header,
+	.main-nav, .row, .container, .main-header-two {
+		display: flex;
+	}
+	
+}
+
+
+/*both media queries*/
+
+	.col { 
+		
+		@include phone {
+			flex: 1 50%;
+		}
+		@include desktop {
+			flex: 1 30%;
+		}
+}
+	
+	.main-header {
+		@include phone {
+		flex-direction: column;
+		align-items: center;
+	}
+		@include desktop {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 80%;
+		max-width: 1150px;
+	}
+}
+	
+
+	.aboutme { 
+		@include phone {
+		text-align: left;
+		padding: 0 $normal;
+	}
+		@include desktop {
+		padding: 0 $normal 0 0;
+	}
+}
+	
+
+/*desktop only*/
+
+@include desktop {
+	.img {
+		width: 300px;
+	}
+		
+	.row {
+		width: 80%;
+		max-width: 1150px;
+	}
+	
+	.container {
+		padding-right: $normal;
+	}
+}

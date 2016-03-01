@@ -1,0 +1,73 @@
+/*variables*/
+
+$font: 'Varela Round', sans-serif;
+$link-color: black;
+
+/*end of variables*/
+
+/*placeholder selectors*/
+
+%margin {
+	margin: 0;
+}
+
+/*end of placeholder selectors*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font; 
+	line-height: 1.6;
+	@extend %margin;
+	h1 {
+		@extend %margin;
+		text-align: center;
+	}
+	h2 {
+		@extend %margin;
+		text-align: center;
+	}
+	h3 {
+		@extend %margin;
+		text-align: center;
+	}
+}
+
+ul {
+  @extend %margin;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+h2,
+h3,
+a {
+	color: $link-color;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 60%;
+}
+
+.important {
+	padding-top: 3em;
+}
+
+
+.row, .container {
+	text-align: center;
+}
+
+.portfolio {
+	max-width: 100%;
+}
+
+

@@ -1,0 +1,35 @@
+/*variables*/
+
+$margin-base: 5px;
+
+/*end of variables*/
+
+.main-nav-mobile {
+	display: flex;
+    justify-content: space-between
+}
+
+.main-nav, .main-nav-mobile {
+	margin-top: 5px;
+}
+.name a,
+.main-nav a, .main-nav-mobile a {
+	text-align: center;
+	display: block;
+	padding: ($margin-base * 2) ($margin-base * 3);
+}
+.main-nav a, .main-nav-mobile a {
+	font-size: .95em;
+	color: black;
+	text-transform: uppercase;
+}
+.main-nav a:hover, .main-nav-mobile a:hover {
+	color: gold;
+}
+
+.main-nav li, .main-nav-mobile li {
+	background-color: white;
+	margin: .5em;
+	font-weight: 600;
+}
+
