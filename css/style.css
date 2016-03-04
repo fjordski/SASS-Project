@@ -1,6 +1,3 @@
-/*variables*/
-/*end of variables*/
-/*placeholder selectors*/
 body, body h1, body h2, body h3, ul {
   margin: 0; }
 
@@ -131,6 +128,9 @@ img {
   color: grey;
   text-align: center; }
 
+/*mixins*/
+/*end of mixins*/
+/*mobile only*/
 @media only screen and (min-width: 769px) {
   .main-header,
   .row, .container, .main-header-two {

@@ -1,11 +1,4 @@
-/*variables*/
-
-$font: 'Varela Round', sans-serif;
-$link-color: black;
-
-/*end of variables*/
-
-/*placeholder selectors*/
+@import "variables/variables";
 
 %margin {
 	margin: 0;
